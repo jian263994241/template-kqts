@@ -1,0 +1,25 @@
+{
+  "name": "cra-template-kqts",
+  "version": "1.0.0",
+  "description": "Create react app template",
+  "main": "template.json",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jian263994241/cra-template-kqts.git"
+  },
+  "keywords": [
+    "create",
+    "react",
+    "app",
+    "template"
+  ],
+  "author": "jian.li",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jian263994241/cra-template-kqts/issues"
+  },
+  "homepage": "https://github.com/jian263994241/cra-template-kqts#readme"
+}

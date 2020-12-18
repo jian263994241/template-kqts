@@ -1,0 +1,76 @@
+{
+  "package": {
+    "dependencies": {
+      "@commitlint/cli": "^11.0.0",
+      "@commitlint/config-conventional": "^11.0.0",
+      "@testing-library/jest-dom": "^5.11.4",
+      "@testing-library/react": "^11.1.0",
+      "@testing-library/user-event": "^12.1.10",
+      "@types/jest": "^26.0.15",
+      "@types/node": "^12.0.0",
+      "@types/react": "^16.9.53",
+      "@types/react-dom": "^16.9.8",
+      "@typescript-eslint/eslint-plugin": "^4.10.0",
+      "@wonder-ui/styles": "^2.0.0-beta.5",
+      "axios": "^0.21.0",
+      "crypto-js": "^4.0.0",
+      "cz-conventional-changelog": "^3.3.0",
+      "env-cmd": "^10.1.0",
+      "eslint-config-prettier": "^7.0.0",
+      "eslint-plugin-prettier": "^3.3.0",
+      "glob": "^7.1.6",
+      "husky": "^4.3.6",
+      "mobx": "^6.0.4",
+      "mobx-react": "^7.0.5",
+      "mobx-state-tree": "^4.0.2",
+      "mocker-api": "^2.7.4",
+      "prettier": "^2.2.1",
+      "pretty-quick": "^3.1.0",
+      "rc-hooks": "^0.7.0",
+      "react": "^17.0.1",
+      "react-dom": "^17.0.1",
+      "react-scripts": "4.0.1",
+      "typescript": "^4.0.3",
+      "util-helpers": "^3.7.4",
+      "web-vitals": "^0.2.4"
+    },
+    "scripts": {
+      "start": "env-cmd -e development react-scripts start",
+      "start:mock": "env-cmd -e mock npm run start",
+      "build": "env-cmd -e production react-scripts build",
+      "test": "react-scripts test",
+      "commit": "git-cz"
+    },
+    "proxy": "http://localhost:4000",
+    "eslintConfig": {
+      "extends": [
+        "react-app",
+        "prettier/@typescript-eslint",
+        "plugin:prettier/recommended"
+      ]
+    },
+    "browserslist": {
+      "production": [
+        ">0.2%",
+        "not dead",
+        "not op_mini all"
+      ],
+      "development": [
+        "last 1 chrome version",
+        "last 1 firefox version",
+        "last 1 safari version"
+      ]
+    },
+    "husky": {
+      "hooks": {
+        "pre-commit": "pretty-quick --staged --pattern \"**/*.*(js|jsx)\"",
+        "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      }
+    },
+    "config": {
+      "commitizen": {
+        "path": "./node_modules/cz-conventional-changelog"
+      }
+    }
+  }
+}
