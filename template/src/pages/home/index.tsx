@@ -1,6 +1,7 @@
 import * as React from 'react';
-import { inject } from 'mobx-react';
+import { observer } from 'mobx-react';
 import { createUseStyles } from '@wonder-ui/styles';
+import useStore from 'src/hooks/useStore';
 
 const useStyles = createUseStyles({
   root: {
@@ -21,18 +22,17 @@ const useStyles = createUseStyles({
   }
 });
 
-export default inject('store')(function HomePage(props: {
-  store?: { home: any };
-}): JSX.Element {
-  const { store } = props;
-
-  console.log(store?.home);
+export default observer(function HomePage(): JSX.Element {
+  const {
+    store: { home }
+  } = useStore();
 
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
       <header className={classes.header}>
+        {home.title}
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
