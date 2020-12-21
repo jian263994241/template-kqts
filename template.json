@@ -18,6 +18,7 @@
       "env-cmd": "^10.1.0",
       "eslint-config-prettier": "^7.0.0",
       "eslint-plugin-prettier": "^3.3.0",
+      "filemanager-webpack-plugin": "^3.0.0-beta.0",
       "glob": "^7.1.6",
       "husky": "^4.3.6",
       "mobx": "^6.0.4",
@@ -28,6 +29,7 @@
       "pretty-quick": "^3.1.0",
       "rc-hooks": "^0.7.0",
       "react": "^17.0.1",
+      "react-app-rewired": "^2.1.8",
       "react-dom": "^17.0.1",
       "react-scripts": "4.0.1",
       "typescript": "^4.0.3",
@@ -37,7 +39,7 @@
     "scripts": {
       "start": "env-cmd -e development react-scripts start",
       "start:mock": "env-cmd -e mock npm run start",
-      "build": "env-cmd -e production react-scripts build",
+      "build": "env-cmd -e production react-app-rewired build",
       "test": "react-scripts test",
       "commit": "git-cz"
     },
