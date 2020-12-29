@@ -13,6 +13,7 @@
       "@typescript-eslint/eslint-plugin": "^4.10.0",
       "@wonder-ui/styles": "^2.0.0-beta.5",
       "axios": "^0.21.0",
+      "commitizen": "^4.2.2",
       "crypto-js": "^4.0.0",
       "cz-conventional-changelog": "^3.3.0",
       "env-cmd": "^10.1.0",
@@ -42,7 +43,7 @@
       "start:mock": "env-cmd -e mock npm run start",
       "build": "env-cmd -e production react-app-rewired build",
       "test": "react-scripts test",
-      "commit": "git-cz"
+      "commit": "cz"
     },
     "proxy": "http://localhost:4000",
     "eslintConfig": {
