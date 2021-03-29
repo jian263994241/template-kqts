@@ -1,6 +1,6 @@
-const delay = require('mocker-api/utils/delay');
+const delay = require('mocker-api/lib/delay');
 const resData = require('./res');
-const { encrypt, decrypt } = require('./utils/aes');
+// const { encrypt, decrypt } = require('./utils/aes');
 
 const handler = (resData) => (req, res) => {
   const key = req.body.header.bizCode;
@@ -9,21 +9,25 @@ const handler = (resData) => (req, res) => {
 
   _resData.header = {
     rspCode: '0000',
-    requestId: 'c255b396-fd8e-46c3-bcf6-c1062448eff5',
+    requestId: 'xxxxx-xxxxxx-xxxxxx-xxxxxx',
     rspMsg: '成功',
     bizCode: key,
   };
 
-  if (resData[key]) {
-    _resData.data = encrypt(JSON.stringify(resData[key]));
+  try {
+    // _resData.data = encrypt(JSON.stringify(resData[key]));
 
-    console.log('------------------------------------');
-    console.log('req.body.header', req.body.header);
-    console.log(key, 'req', decrypt(reqdata));
-    console.log(key, 'res', JSON.stringify(resData[key]));
-    console.log('------------------------------------');
-  } else {
-    _resData.data = encrypt(JSON.stringify({ warn: '404' }));
+    // console.log('------------------------------------');
+    // console.log('req.body.header', req.body.header);
+    // console.log(key, 'req', decrypt(reqdata));
+    // console.log(key, 'res', JSON.stringify(resData[key]));
+    // console.log('------------------------------------');
+
+    _resData.data = JSON.stringify(resData[key]);
+  } catch (error) {
+    // _resData.data = encrypt(JSON.stringify({ warn: '404' }));
+
+    _resData.data = JSON.stringify({ warn: '404' });
   }
 
   res.send(_resData);
