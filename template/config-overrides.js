@@ -10,11 +10,7 @@ module.exports = function override(config, env) {
   const isProduction = process.env.NODE_ENV === 'production';
   const publicPath = url.parse(process.env.PUBLIC_URL).path;
   const pkgDir = path.join(config.output.path, '../zip');
-
-  const zipCacheDir = path.join(
-    'node_modules/.cache/FileManagerPlugin/',
-    pkg.name,
-  );
+  const zipCacheDir = path.join(process.cwd(), '.cache');
 
   config.plugins.push(new WebpackBar());
 
