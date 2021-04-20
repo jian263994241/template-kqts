@@ -4,17 +4,33 @@ const url = require('url');
 const FileManagerPlugin = require('filemanager-webpack-plugin');
 const WebpackBar = require('webpackbar');
 
+// const multipleEntry = require('react-app-rewire-multiple-entry')([
+//   {
+//     entry: 'src/pages/index/render.tsx',
+//     template: 'public/index.html',
+//     outPath: '/tab-index.html',
+//   },
+//   {
+//     entry: 'src/pages/TabMy/render.tsx',
+//     template: 'public/index.html',
+//     outPath: '/tab-my.html',
+//   },
+// ]);
+
 module.exports = function override(config, env) {
   //do stuff with the webpack config...
 
-  const isProduction = process.env.NODE_ENV === 'production';
-  const publicPath = url.parse(process.env.PUBLIC_URL).path;
-  const pkgDir = path.join(config.output.path, '../zip');
-  const zipCacheDir = path.join(process.cwd(), '.cache');
+  // multipleEntry.addMultiEntry(config);
 
   config.plugins.push(new WebpackBar());
 
+  const isProduction = process.env.NODE_ENV === 'production';
+  const publicPath = url.parse(process.env.PUBLIC_URL).path;
+
   if (isProduction) {
+    const pkgDir = path.join(config.output.path, '../zip');
+    const zipCacheDir = path.join(process.cwd(), '.cache');
+
     config.plugins.push(
       new FileManagerPlugin({
         events: {
