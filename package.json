@@ -1,6 +1,6 @@
 {
   "name": "cra-template-kqts",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "Create react app template",
   "main": "template.json",
   "scripts": {
