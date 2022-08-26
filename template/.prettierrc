@@ -1,15 +1,12 @@
 {
   "arrowParens": "always",
-  "printWidth": 80,
-  "tabWidth": 2,
-  "useTabs": false,
-  "semi": true,
-  "parser": "babel",
   "singleQuote": true,
-  "trailingComma": "all",
+  "parser": "babel",
+  "semi": true,
+  "tabWidth": 2,
+  "bracketSameLine": false,
   "bracketSpacing": true,
-  "jsxBracketSameLine": false,
-  "endOfLine": "lf",
+  "trailingComma": "all",
   "overrides": [
     {
       "files": ".prettierrc",
@@ -43,6 +40,13 @@
       "files": "*.json",
       "options": {
         "parser": "json",
+        "trailingComma": "none"
+      }
+    },
+    {
+      "files": "*.scss",
+      "options": {
+        "parser": "scss",
         "trailingComma": "none"
       }
     }

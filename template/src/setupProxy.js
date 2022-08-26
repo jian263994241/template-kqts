@@ -1,5 +1,6 @@
 const path = require('path');
 const apiMocker = require('mocker-api');
+const { createProxyMiddleware } = require('http-proxy-middleware');
 
 module.exports = function setProxy(app) {
   if (process.env.MOCK_INJECT === 'true') {
@@ -11,4 +12,12 @@ module.exports = function setProxy(app) {
       },
     );
   }
+
+  app.use(
+    '/website',
+    createProxyMiddleware({
+      target: 'https://www.99bill.com',
+      changeOrigin: true,
+    }),
+  );
 };
