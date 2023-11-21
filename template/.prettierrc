@@ -49,6 +49,20 @@
         "parser": "scss",
         "trailingComma": "none"
       }
+    },
+    {
+      "files": "*.css",
+      "options": {
+        "parser": "css",
+        "trailingComma": "none"
+      }
+    },
+    {
+      "files": "*.html",
+      "options": {
+        "parser": "html",
+        "trailingComma": "none"
+      }
     }
   ]
 }
