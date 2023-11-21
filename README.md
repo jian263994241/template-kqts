@@ -12,4 +12,6 @@ npx create-react-app my-app --template kqts
 
 yarn create react-app my-app --template kqts
 
+pnpm create react-app my-app --template kqts
+
 ```
