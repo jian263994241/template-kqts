@@ -8,3 +8,11 @@ html, body, #root {
 #root {
   position: absolute;
 }
+
+a {
+  text-decoration: none;
+}
+
+.hidden {
+  display: none;
+}
