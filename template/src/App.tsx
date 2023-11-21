@@ -1,13 +1,20 @@
-import { useRoutes } from 'react-router-dom';
-import lazyElement from 'src/utils/lazyElement';
+import { createBrowserRouter, createHashRouter } from 'react-router-dom';
+import Root from './pages/root';
 
-function MyApp() {
-  return useRoutes([
+export const router = createHashRouter(
+  [
     {
       path: '/',
-      element: lazyElement(() => import('src/pages/index'))
+      element: <Root />,
+      children: [
+        {
+          path: '/login',
+          lazy: () => import('./pages/index')
+        }
+      ]
     }
-  ]);
-}
+  ]
+  // { basename: process.env.PUBLIC_URL }
+);
 
-export default MyApp;
+window.app = router;
