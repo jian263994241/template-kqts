@@ -4,8 +4,8 @@ import 'react-app-polyfill/stable';
 import 'regenerator-runtime/runtime';
 import React from 'react';
 import ReactDOMClient from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
-import App from './App';
+import { RouterProvider } from 'react-router-dom';
+import { router } from './App';
 import reportWebVitals from './reportWebVitals';
 
 const rootElement = document.getElementById('root') as HTMLElement;
@@ -14,17 +14,13 @@ if (rootElement.hasChildNodes()) {
   ReactDOMClient.hydrateRoot(
     rootElement,
     <React.StrictMode>
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
-        <App />
-      </BrowserRouter>
+      <RouterProvider router={router} />
     </React.StrictMode>
   );
 } else {
   ReactDOMClient.createRoot(rootElement).render(
     <React.StrictMode>
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
-        <App />
-      </BrowserRouter>
+      <RouterProvider router={router} />
     </React.StrictMode>
   );
 }
