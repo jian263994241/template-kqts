@@ -1,7 +1,5 @@
 import './reset.css';
-import 'react-app-polyfill/ie11';
 import 'react-app-polyfill/stable';
-import 'regenerator-runtime/runtime';
 import React from 'react';
 import ReactDOMClient from 'react-dom/client';
 import { RouterProvider } from 'react-router-dom';
