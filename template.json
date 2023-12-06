@@ -4,6 +4,7 @@
       "@types/node": "^20.8.7",
       "@types/react": "^18.2.29",
       "@types/react-dom": "^18.2.14",
+      "abortcontroller-polyfill": "^1.7.5",
       "ahooks": "^3.7.8",
       "axios": "^1.6.1",
       "cache2": "^1.1.1",
