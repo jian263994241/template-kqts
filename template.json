@@ -7,7 +7,7 @@
       "abortcontroller-polyfill": "^1.7.5",
       "ahooks": "^3.7.8",
       "axios": "^1.6.1",
-      "cache2": "^1.1.1",
+      "cache2": "^2.0.1",
       "clsx": "^2.0.0",
       "querystringify": "^2.2.0",
       "react": "^18.2.0",
