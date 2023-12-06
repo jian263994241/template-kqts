@@ -1,5 +1,6 @@
 import './reset.css';
 import 'react-app-polyfill/stable';
+import 'abortcontroller-polyfill/dist/polyfill-patch-fetch';
 import React from 'react';
 import ReactDOMClient from 'react-dom/client';
 import { RouterProvider } from 'react-router-dom';
