@@ -6,7 +6,7 @@ export default function RootElement() {
 
   return (
     <HelmetProvider>
-      {location.pathname === '/' && <Navigate to="/juzi" replace />}
+      {location.pathname === '/' && <Navigate to="/index" replace />}
       <Outlet />
     </HelmetProvider>
   );

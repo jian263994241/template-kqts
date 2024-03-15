@@ -1,17 +1,11 @@
-# cra-template-kqts
-
-This is the official TypeScript template for Create React App.
-
-## 使用
+# template-kqts
 
 ```base
 
-npx create-react-app my-app --template kqts
+npx degit jian263994241/template-kqts#main my-project
+cd my-project
 
-# or
-
-yarn create react-app my-app --template kqts
-
-pnpm create react-app my-app --template kqts
+npm install
+npm run dev
 
 ```

@@ -1,30 +1,71 @@
 {
-  "name": "cra-template-kqts",
-  "version": "2.0.11",
-  "description": "Create react app template",
-  "main": "template.json",
+  "name": "my-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
   },
-  "files": [
-    "template",
-    "template.json",
-    "README.md"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jian263994241/cra-template-kqts.git"
+  "dependencies": {
+    "abortcontroller-polyfill": "^1.7.5",
+    "react": "^18.2.0",
+    "react-app-polyfill": "^3.0.0",
+    "react-dom": "^18.2.0",
+    "react-helmet-async": "^2.0.4",
+    "react-router-dom": "^6.22.3"
   },
-  "keywords": [
-    "create",
-    "react",
-    "app",
-    "template"
-  ],
-  "author": "jian.li",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/jian263994241/cra-template-kqts/issues"
+  "devDependencies": {
+    "@commitlint/cli": "^19.2.0",
+    "@commitlint/config-conventional": "^19.1.0",
+    "@types/react": "^18.2.64",
+    "@types/react-dom": "^18.2.21",
+    "@typescript-eslint/eslint-plugin": "^7.1.1",
+    "@typescript-eslint/parser": "^7.1.1",
+    "@vitejs/plugin-react": "^4.2.1",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "husky": "^9.0.11",
+    "less": "^4.2.0",
+    "mocker-api": "^2.9.10",
+    "prettier": "^3.2.5",
+    "pretty-quick": "^4.0.0",
+    "typescript": "^5.2.2",
+    "vite": "^5.1.6"
   },
-  "homepage": "https://github.com/jian263994241/cra-template-kqts#readme"
+  "browserslist": {
+    "production": [
+      "last 1 version",
+      "> 1%",
+      "IE 11"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "prettier",
+      "plugin:prettier/recommended"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged --pattern \"**/*.*(js|jsx)\"",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
