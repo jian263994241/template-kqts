@@ -3,8 +3,12 @@ import react from '@vitejs/plugin-react';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  base: '/',
+  build: {
+    outDir: 'build'
+  },
   envPrefix: 'REACT_',
+  plugins: [react()],
   resolve: {
     alias: {
       src: path.resolve(__dirname, 'src')
@@ -14,10 +18,7 @@ export default defineConfig({
     proxy: {
       '/api': {
         target: 'http://jsonplaceholder.typicode.com',
-        changeOrigin: true,
-        configure: (proxy, options) => {
-          // proxy 是 'http-proxy' 的实例
-        }
+        changeOrigin: true
       }
     }
   }
