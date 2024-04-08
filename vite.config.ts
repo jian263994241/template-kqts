@@ -6,7 +6,7 @@ import path from 'path';
 export default defineConfig({
   base: '/',
   build: {
-    outDir: 'build'
+    // outDir: 'build'
   },
   envPrefix: 'REACT_',
   plugins: [react()],
