@@ -6,7 +6,7 @@ import path from 'path';
 export default defineConfig({
   base: '/',
   build: {
-    outDir: 'build',
+    outDir: 'dist',
     assetsInlineLimit: 1024,
     chunkSizeWarningLimit: 2000,
     rollupOptions: {
