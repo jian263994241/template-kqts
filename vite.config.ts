@@ -6,7 +6,17 @@ import path from 'path';
 export default defineConfig({
   base: '/',
   build: {
-    // outDir: 'build'
+    outDir: 'build',
+    assetsInlineLimit: 1024,
+    chunkSizeWarningLimit: 2000,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          antd: ['antd', 'antd-more'],
+          react: ['react', 'react-dom', 'react-router-dom']
+        }
+      }
+    }
   },
   envPrefix: 'REACT_',
   plugins: [react()],
