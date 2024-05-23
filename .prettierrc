@@ -1,7 +1,7 @@
 {
   "arrowParens": "always",
   "singleQuote": true,
-  "parser": "babel",
+  "parser": "babylon",
   "semi": true,
   "tabWidth": 2,
   "bracketSameLine": false,
