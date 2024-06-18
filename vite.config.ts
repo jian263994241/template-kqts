@@ -12,7 +12,7 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          antd: ['antd', 'antd-more'],
+          //antd: ['antd', 'antd-more'],
           react: ['react', 'react-dom', 'react-router-dom']
         }
       }
