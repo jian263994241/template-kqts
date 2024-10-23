@@ -4,7 +4,7 @@ export async function loader() {
   return {};
 }
 
-export default function PageIndex() {
+function PageIndex() {
   return (
     <>
       <Helmet>
